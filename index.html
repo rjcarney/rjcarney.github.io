@@ -6,6 +6,11 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
@@ -26,9 +31,37 @@
 
     <section id="carousel">
       <div class="display">
-        <div class="content active">
+
+        <div id="weather-app" class="content active">
           <div class="numbertext">1/3</div>
           <img src="images/img1.jpg" alt="missing image">
+
+          <div class="weather-search">
+            <input type="text" name="city" placeholder="Search for City">
+            <button type="button" name="button">Search</button>
+          </div>
+
+          <div class="weather-card">
+            <div class="front">
+              <h3 id="city">City</h3>
+              <div class="current-weather">
+                <i></i>
+                <p>54F</p>
+              </div>
+              <p>Tuesday, April 27th</p>
+            </div>
+            <div class="back">
+              <h3>7 day Forecast</h3>
+              <p><b>Today</b> 54F</p>
+              <p><b>Tomorrow</b> 54F</p>
+              <p><b>Wednesday</b> 54F</p>
+              <p><b>Thursday</b> 54F</p>
+              <p><b>Friday</b> 54F</p>
+              <p><b>Saturday</b> 54F</p>
+              <p><b>Sunday</b> 54F</p>
+            </div>
+          </div>
+
           <div class="caption">Caption One</div>
         </div>
         <div class="content">
@@ -55,4 +88,6 @@
       <h1>Hello World</h1>
     </main>
   </body>
+
+  <script type="text/javascript" src="weather.js"></script>
 </html>
