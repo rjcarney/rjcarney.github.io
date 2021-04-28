@@ -102,41 +102,23 @@ section#carousel .dots .dot.active {
   background-color: darkred;
 }
 
-.weather-card {
-  float: right;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  bottom: 10px;
-  width: 400px;
-  height: 80%;
-  color: white;
-}
-
-#weather-app .weather-search {
+#weather-app form {
   position: absolute;
   top: 10px;
   left: 10px;
 }
 
-.weather-search input {
+#weather-app form input {
   background: black;
   color: white;
   width: 300px;
 }
 
-.weather-card .front {
+.weather-card {
+  background: black;
+  color: white;
+  float: right;
   position: absolute;
-  background: blue;
-  height: 100%;
-  width: 100%;
-}
-
-.weather-card .back {
-  position: absolute;
-  background: red;
-  height: 100%;
-  width: 100%;
-  transform: rotateX(90);
-  display: none;
+  top: 10px;
+  right: 10px;
 }
