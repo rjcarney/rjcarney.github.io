@@ -5,7 +5,7 @@
 h1, h2, h3 {
   font-family: 'PT Serif', serif;  font-weight: bold;
 }
-p, a, li, span, iframe{
+p, a, li, span, b, iframe{
   font-family: 'PT Sans', sans-serif;
   font-size: 1rem;
 }
@@ -20,6 +20,10 @@ h3 {
 }
 h4 {
   font-size: 1rem;
+}
+
+li {
+  list-style: none;
 }
 
 /* Generic Classes */
