@@ -1,0 +1,95 @@
+/* Hero Section */
+#hero {
+  background-image: url('../assets/images/bar.jpg');
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: white;
+  padding: 25px;
+  min-height: 300px;
+  height: auto;
+}
+
+#hero .call_to_action {
+  margin: 15px;
+}
+
+#hero p {
+  font-size: 18px;
+}
+
+#hero .buttonrow {
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#hero a {
+  text-decoration: none;
+  background-color: red;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 5px;
+  margin: 5px 10px;
+}
+#hero #call_now {
+  background-color: green;
+}
+
+#hero a:hover {
+  background-color: darkred;
+}
+#hero #call_now:hover {
+  background-color: darkgreen;
+}
+
+/* Main Content */
+main .row {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.left {
+  width: 70%;
+}
+.right {
+  width: 30%;
+}
+@media only screen and (max-width: 880px) {
+  .left {
+    width: 100%;
+  }
+  .right {
+    width: 100%;
+  }
+}
+
+/* Updates Section */
+iframe {
+  width: 100%;
+}
+
+/* Gallery Section */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.gallery img {
+  padding: 5px;
+  width: 45%;
+}
+@media only screen and (min-width: 580px) and (max-width: 880px) {
+  .gallery img {
+    width: 48%;
+  }
+}
+@media only screen and (max-width: 579px) {
+  .gallery img {
+    width: 100%;
+  }
+}

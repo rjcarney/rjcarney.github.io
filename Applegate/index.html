@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>The Applegate Inn</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/home.css">
+  </head>
+  <body>
+    <header>
+      <h1 class="logo center">The Applegate Inn</h1>
+      <p class="tagline">The Best Pizza In Town.</p>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li> |
+          <li><a href="menu.html">Menu</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <br>
+
+    <section id="hero">
+      <div class="call_to_action">
+        <h2>Dine In or Order Carry Out By Phone!</h2>
+        <p>Great Food and Great Drinks.</p>
+      </div>
+      <span class="buttonrow">
+        <a href="menu.html">View Menu</a>
+        <a href="https://www.google.com/maps/dir//Applegate+Inn,+4736+Main+Rd,+Applegate,+MI+48401/@43.3551801,-82.6397035,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8825c384d4b9756f:0x34dab0abc6f1f93b!2m2!1d-82.6375185!2d43.3552301">
+          Get Directions
+        </a>
+        <a id="call_now" href="tel:+8106339398">Call Now!</a>
+      </span>
+    </section>
+
+    <main>
+      <div class="row">
+        <div class="left column">
+
+          <section id="About">
+            <h3>About Us</h3>
+            <hr>
+            <p>
+              This is just some filler text meant to mimic the actual look
+              of the website. The text goes here should closly resemble the length
+              of this text for the best results. This is another buffer sentence
+              made to make the paragraph slightly longer than two sentences and
+              stretch onto a third line.
+            </p>
+          </section>
+
+          <section id="Updates">
+            <h3>Recent Updates</h3>
+            <hr>
+            <div class="updates">
+              <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D2965792816813328%26id%3D446938768698758&show_text=true&width=500" height="107" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+              <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2F446938768698758%2Fphotos%2Fa.448420621883906%2F1123541664371795%2F&show_text=true&width=500" height="519" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+          </section>
+
+        </div>
+        <div class="right column">
+
+          <section id="Gallery">
+            <h3>Gallery</h3>
+            <hr>
+            <div class="gallery">
+              <img src="assets/images/bar.jpg" alt="bar">
+              <img src="assets/images/pizza.jpg" alt="pizza">
+              <img src="assets/images/pizza.jpg" alt="pizza">
+              <img src="assets/images/bar.jpg" alt="bar">
+              <img src="assets/images/bar.jpg" alt="bar">
+              <img src="assets/images/pizza.jpg" alt="pizza">
+              <img src="assets/images/pizza.jpg" alt="pizza">
+              <img src="assets/images/bar.jpg" alt="bar">
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </main>
+
+    <footer class="row">
+      <nav>
+        <h3>The Applegate Inn</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="https://www.facebook.com/Applegate-Inn-446938768698758/">Connect</a></li>
+        </ul>
+      </nav>
+      <div id="business_info">
+        <h3>Business Hours</h3>
+        <p>Monday-Thursday: 11am-8pm</p>
+        <p>Friday-Saturday: 11am-11pm</p>
+        <p>Sunday:          12am-9pm</p>
+      </div>
+      <div id="map"></div>
+    </footer>
+
+    <script src="js/map.js"></script>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOHrE32ceUWHAXlsc2dhr_TKh8sqZ79po&callback=initMap&libraries=&v=weekly" async></script>
+  </body>
+</html>

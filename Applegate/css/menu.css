@@ -1,0 +1,40 @@
+main h2, main h3, main h4 {
+  text-align: center;
+}
+
+.row {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card {
+  width: 30%;
+}
+@media only screen and (max-width: 799px) {
+  .card {
+    width: 48%;
+  }
+}
+@media only screen and (min-width: 520px) and (max-width: 799px) {
+  .card {
+    width: 48%;
+  }
+}
+@media only screen and (max-width: 519px) {
+  .card {
+    width: 100%;
+  }
+}
+.topping{
+  list-style: none;
+  text-align: center;
+}
+
+span p {
+  display: inline;
+}
+.app_item{
+  float: left;
+}
+.price{
+  float: right;
+}

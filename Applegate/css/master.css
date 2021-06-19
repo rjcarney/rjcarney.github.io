@@ -1,0 +1,103 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@0;1&family=PT+Serif:wght@400;700&display=swap');
+/* Fonts and Font Sizes Should Only Be Set Here In Master
+   To Maintain Consistency */
+h1, h2, h3 {
+  font-family: 'PT Serif', serif;  font-weight: bold;
+}
+p, a, iframe{
+  font-family: 'PT Sans', sans-serif;
+}
+h1{
+  font-size: 36px;
+}
+h2 {
+  font-size: 28px;
+}
+h3 {
+  font-size: 22px;
+}
+
+/* Generic Classes */
+.center {
+  text-align: center;
+}
+.row {
+  display: flex;
+}
+
+/* Header Section */
+.logo {
+  padding: 20px 0 0;
+}
+.tagline {
+  text-align: center;
+  padding: 0 0 20px;
+}
+
+.navbar ul {
+  text-align: center;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar li a {
+  padding: 10px 12px;
+  font-size: 18px;
+  text-decoration: none;
+  color: red;
+}
+.navbar li a:hover {
+  background-color: red;
+  color: white;
+}
+
+/* Main Section */
+main {
+  padding: 10px 20px;
+}
+main section {
+  margin: 10px;
+}
+
+/* Footer Section */
+footer {
+  padding: 10px;
+  background-color: lightgrey;
+  border-top: 1px solid grey;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer nav {
+  width: 20%;
+}
+footer a {
+  text-decoration: none;
+  color: red;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+#business_info {
+  width: 20%;
+}
+#map {
+  height: 300px;
+  width: 50%;
+}
+@media only screen and (max-width: 880px) {
+  footer {
+    text-align: center;
+  }
+  footer nav {
+    width: 100%;
+  }
+  #business_info {
+    width: 100%;
+  }
+  #map {
+    width: 100%;
+  }
+}
