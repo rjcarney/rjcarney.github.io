@@ -1,142 +1,539 @@
-nav {
-  background-color: red;
-  overflow: hidden;
+.light {
+  color: #F3F3F3;
 }
-nav div {
+hr.light {
+  border-color: #F3F3F3;
+}
+#hero {
+  position: relative;
+  z-index: 0;
+  margin-bottom: -6px;
+}
+/* Add a black background color to the top navigation */
+.topnav {
   width: 100%;
-  display: block;
+  position: absolute;
+  background-color: #161925;
+  overflow: hidden;
+  z-index: 50;
 }
-nav a {
-  display: block;
-  color: white;
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f3f3f3;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
 }
-nav .settings a {
-  float: right;
-}
-nav .main a {
-  float: left;
-}
-
-nav a:hover {
-  background-color: rgba(255,255,255,0.3);
-  color: black;
-}
-nav a.active {
-  background-color: darkred;
-  color: white;
-}
-section#carousel .display {
-  width: 100%;
-  position: relative;
-  margin: auto;
-}
-section#carousel .display .content {
+.topnav .nav-burger{
   display: none;
 }
-section#carousel .display .content.active {
-  display: block;
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #B4B8C5;
+  color: #000000;
+  text-decoration: none;
 }
-section#carousel .display .content .numbertext {
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #111D4A;
+  color: #f3f3f3;
+}
+#hero div.topnav {
+  float: right;
+  text-align: left;
   color: white;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+  text-decoration: none;
+  font-size: 17px;
+  z-index: 50;
 }
-section#carousel .display .content img {
+#hero video {
+  height: 100vh;
   width: 100%;
-  height: 80vh;
+  background-position: absolute;
+  z-index: 10;
   object-fit: cover;
 }
-section#carousel .display .content .caption {
-  color: white;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
+#hero .content {
+  height: 100%;
   width: 100%;
-  text-align: center;
-}
-.prev, .next {
-  cursor: pointer;
+  z-index: 20;
   position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 17px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+  top: 0;
+  left: 0;
 }
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-.prev:hover, .next:hover {
-  background-color: red;
-}
-section#carousel .dots {
-  text-align: center;
-}
-section#carousel .dots .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: darkgrey;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-section#carousel .dots .dot:hover {
-  background-color: grey;
-}
-section#carousel .dots .dot.active {
-  background-color: darkred;
-}
-
-.weather-card {
-  float: right;
+#hero .content h1 {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  bottom: 10px;
-  width: 400px;
-  height: 80%;
-  color: white;
-}
-
-#weather-app .weather-search {
-  position: absolute;
-  top: 10px;
+  top: 70px;
   left: 10px;
+  color: #fff;
+  font-weight: 600;
 }
-
-.weather-search input {
-  background: black;
-  color: white;
-  width: 300px;
-}
-
-.weather-card .front {
+#hero .content h3 {
   position: absolute;
-  background: blue;
-  height: 100%;
+  top: 120px;
+  left: 10px;
+  color: #fff;
+  font-weight: 400;
+}
+
+#about {
+  background-color: #161925;
+  position: relative;
+  width: 100%;
+  align-items: center;
+  margin-bottom: -14px;
+}
+#about .about-title {
+  padding-top: 10px;
+  margin-bottom: -25px;
+  text-align: center;
+  overflow: hidden;
+}
+#about .row {
+  display: flex;
+  width: 100%;
+}
+#about .row .about-info {
+  margin: auto;
+}
+#about .row .about-image {
+  margin: auto;
+  display: flex;
+  width: 100%;
+}
+#about .row .about-image img {
+  border: 25px solid #A2999A;
+  margin: 0;
   width: 100%;
 }
 
-.weather-card .back {
-  position: absolute;
-  background: red;
-  height: 100%;
+#skills-and-blog {
   width: 100%;
-  transform: rotateX(90);
+  padding: 0;
+  z-index: 10;
+  margin-bottom: -18px;
+  margin-top: -10px;
+  margin-left: 0;
+  margin-right: 0;
+}
+#my-skills {
+  background-color: #F3F3F3;
+  width: 100%;
+  z-index: 10;
+}
+#my-skills .my-skills-title {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+#my-skills .skill-cards {
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  height: 100%;
+}
+#my-skills .skill-cards .card-container {
+  height: 100%;
+}
+#my-skills .skill-cards .card {
+  align-items: center;
+  padding: 15px 10px;
+  margin: 10px;
+  height: 100%;
+}
+#my-skills .skill-cards .card i {
+  color: #161925;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 50px;
+}
+#my-skills .skill-cards .card h5 {
+  text-align: center;
+}
+#blog {
+  align-items: center;
+  background-color: #B4B8C5;
+  padding-top: 10px;
+  width: 100%;
+  z-index: 5;
+}
+#blog .blog-title {
+  text-align: center;
+  margin: 10px 0;
+}
+#blog hr {
+  border-color: #000000;
+}
+#blog .side-cards {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+#blog .side-cards .card {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 20px;
+  width: 100%;
+  border: none;
+}
+#blog .side-cards .card .side-card-img {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0;
+}
+#blog .side-cards .card .side-card-img  img {
+  left: 10px;
+  padding: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+#blog .side-cards .card .card-content {
+  padding: 0 25px;
+}
+#blog .side-cards .card .card-content .side-card-title {
+  margin-top: 10px;
+  text-align: left;
+}
+#blog .side-cards .card .card-content .side-card-info {
+  margin-bottom: 10px;
+  text-align: left;
+}
+#blog .side-cards .card .card-content a {
+  margin-top: 0;
+  margin-bottom: 10px;
+  border-color: #111D4A;
+  color: #111D4A;
+}
+#blog .side-cards .card .card-content a:hover {
+  margin-bottom: 10px;
+  border-color: #111D4A;
+  background-color: #111D4A;
+  color: #F3F3F3;
+}
+
+
+#tools {
+  position: relative;
+  background-color: #F3F3F3;
+  width: 100%;
+  margin-top: -47px;
+  padding-bottom: 30px;
+}
+#tools .tools-title {
+  text-align: center;
+  margin: 0;
+  padding-bottom: 15px;
+  padding-top: 30px;
+}
+#tools .tool-tabs {
+  position:relative;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: -30px;
+}
+#tools .tool-tabs .tab {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+#tools .tool-tabs .tab:hover {
+  background: #B4B8C5;
+}
+#tools .tool-tabs .tab:hover p {
+  color: #000000;
+}
+#tools .tool-tabs .active {
+  background: #111D4A;
+}
+#tools .tool-tabs .active p{
+  color: #F3F3F3;
+}
+#tools .tool-tabs .tab button {
+  background: none;
+  border: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+#tools .tool-tabs .tab p {
+  margin: auto;
+  padding: 20px;
+}
+#tools .tool-content-view {
+  display: flex;
+  margin-top: -30px;
+  box-sizing: border-box;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+#tools .tool-content-view .tool-content {
+  background-color: #F9F9F9;
+  margin: 0;
+  padding: 0;
   display: none;
+  width: 100%;
+}
+#tools .tool-content-view .active{
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 100%;
+}
+
+.calculator {
+  width: 100%;
+}
+.calculator .calculator-input {
+  padding: 20px;
+  width: 100%;
+}
+.calculator .calculator-input input {
+  text-align: right;
+  height: 50px;
+  width: 100%;
+}
+.calculator .calculator-buttons {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+}
+.calculator .calculator-buttons .button-row {
+  display: flex;
+  flex: 20%;
+}
+.calculator .calculator-buttons .button-row button {
+  flex: 25%;
+  padding: 5px;
+  margin: 10px;
+
+}
+
+.calender {
+  width: 100%;
+}
+.calender .monthContainer{
+  background-color: #111D4A;
+  padding: 15px 0;
+  display: flex;
+}
+.calender .monthContainer .previous{
+  flex: 10%;
+}
+.calender .monthContainer .month-title{
+  flex: 80%;
+}
+.calender .monthContainer .month-title .month-text {
+  color: white;
+}
+.calender .monthContainer .month-title .year-text {
+  color: white;
+}
+.calender .monthContainer .next{
+  flex: 10%;
+}
+.calender .weekdays {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.calender .weekdays .day{
+  flex: 13.6%;
+  border: 1px solid #A2999A;
+  margin: 0;
+  padding: 0;
+}
+.calender .week {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.calender .week .datebox{
+  flex: 13.6%;
+  border: 1px solid #A2999A;
+  margin: 0;
+  padding: 0;
+}
+.calender .week .datebox:hover {
+  background: #A2999A;
+}
+.calender .week .datebox .date{
+  float: left;
+  padding-left: 2px;
+}
+
+.to-do {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.to-do .to-do-list {
+  flex: 90%;
+  width:100%;
+}
+.to-do .to-do-list .to-do-item {
+  display: flex;
+  padding: 20px;
+  width: 100%;
+}
+.to-do .to-do-list .to-do-item .item-checkbox {
+  flex: 5%;
+  width: 100%;
+}
+.to-do .to-do-list .to-do-item .item-text-div {
+  flex: 75%;
+  text-align: left;
+  width: 100%;
+}
+.to-do .to-do-list .to-do-item .delete-item {
+  flex: 20%;
+  float: right;
+  margin-left: 5px;
+  padding: 0;
+}
+.to-do .to-do-list .to-do-item .delete-item button{
+  width: 100%;
+}
+.to-do .to-do-input {
+  display: flex;
+  flex: 10%;
+  padding: 20px;
+  width: 100%;
+}
+.to-do .to-do-input .text-input {
+  flex: 80%;
+}
+.to-do .to-do-input .to-do-submit {
+  flex: 20%;
+  margin-left: 5px;
+}
+.color-guesser {
+  position: relative;
+  padding: 100px;
+  background: #111D4A;
+  font-size: 36px;
+}
+.color-guesser input {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.color-guesser h2 {
+  color: #FFFFFF;
+}
+
+
+#Portfolio{
+  background-color: #111D4A;
+  margin-top: -30px;
+  padding-bottom: 20px;
+  z-index: 15;
+}
+#Portfolio .Portfolio-title {
+  padding-top: 10px;
+  text-align: center;
+}
+#Portfolio hr {
+  width: 98%;
+}
+#Portfolio .card-container {
+  padding: 10px;
+}
+#Portfolio .card {
+  height: 100%;
+}
+#Portfolio .card img{
+  object-fit: cover;
+  width: 100%;
+  height: 225px;
+}
+#Portfolio .card p {
+  padding-bottom: 20px;
+}
+#Portfolio .card a {
+  position: absolute;
+  bottom: 5px;
+  border-color: #161925;
+  color: #161925;
+}
+#Portfolio .card a:hover {
+  background-color: #111D4A;
+  border-color: #111D4A;
+  color: #F3F3F3;
+}
+footer {
+  background-color: #161925;
+  bottom: 0;
+  margin-top: -30px;
+}
+footer .social {
+  padding-top: 10px;
+}
+footer .social .social-icons {
+
+}
+footer .social .social-icons i {
+
+}
+footer .contact-form {
+  display: flex;
+  flex-direction: column;
+}
+footer .contact-form .email-title {
+  flex: 10%;
+  margin-bottom: 10px;
+}
+footer .contact-form .email-content {
+  flex: 80%;
+  margin-bottom: 10px;
+}
+footer .contact-form button {
+  flex: 10%;
+  width: 20%;
+}
+html body {
+  background-color: #161925;
+}
+@media screen and (max-width: 992px) {
+  #blog{
+    padding-top: 15px;
+  }
+  #blog .blog-title {
+    margin-bottom: 20px;
+  }
+}
+
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 750px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.nav-burger {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 750px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.nav-burger {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
