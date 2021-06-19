@@ -5,7 +5,7 @@
 h1, h2, h3 {
   font-family: 'PT Serif', serif;  font-weight: bold;
 }
-p, a, li, iframe{
+p, a, li, span, iframe{
   font-family: 'PT Sans', sans-serif;
   font-size: 1rem;
 }
