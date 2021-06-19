@@ -79,7 +79,7 @@ footer {
   justify-content: space-between;
 }
 footer nav {
-  width: 20%;
+  width: 100%;
 }
 footer a {
   text-decoration: none;
@@ -89,23 +89,23 @@ footer a:hover {
   text-decoration: underline;
 }
 #business_info {
-  width: 20%;
+  width: 100%;
 }
 #map {
   height: 300px;
-  width: 50%;
+  width: 100%;
 }
-@media only screen and (max-width: 880px) {
+@media only screen and (min-width: 880px) {
   footer {
     text-align: center;
   }
   footer nav {
-    width: 100%;
+    width: 20%;
   }
   #business_info {
-    width: 100%;
+    width: 20%;
   }
   #map {
-    width: 100%;
+    width: 50%;
   }
 }
