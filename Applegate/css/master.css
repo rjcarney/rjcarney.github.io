@@ -77,6 +77,7 @@ footer {
   border-top: 1px solid grey;
   flex-wrap: wrap;
   justify-content: space-between;
+  text-align: center;
 }
 footer nav {
   width: 100%;
@@ -94,18 +95,4 @@ footer a:hover {
 #map {
   height: 300px;
   width: 100%;
-}
-@media only screen and (min-width: 880px) {
-  footer {
-    text-align: center;
-  }
-  footer nav {
-    width: 20%;
-  }
-  #business_info {
-    width: 20%;
-  }
-  #map {
-    width: 50%;
-  }
 }

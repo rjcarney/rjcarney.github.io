@@ -7,10 +7,7 @@ main h2, main h3, main h4 {
   justify-content: space-between;
 }
 .card {
-  width: 30%;
-}
-.topping{
-  list-style: none;
+  width: 100%;
 }
 
 span p {
@@ -21,15 +18,4 @@ span p {
 }
 .price{
   float: right;
-}
-
-@media only screen and (min-width: 520px) and (max-width: 799px) {
-  .card {
-    width: 48%;
-  }
-}
-@media only screen and (max-width: 519px) {
-  .card {
-    width: 100%;
-  }
 }
