@@ -16,11 +16,11 @@ header a, .nav-link {
 header a:hover {
   color: red;
 }
-.nav-link:hover {
+header .nav-link:hover {
   background-color: white;
   color: red;
 }
-.nav-pills .nav-link.active {
+header .nav-pills .nav-link.active {
   background-color: red;
   color: white;
 }
@@ -33,18 +33,26 @@ header a:hover {
 .hero {
   width: 100%;
 }
-footer {
+.hero .nav .nav-link {
+  color: red;
+}
+.hero .nav .nav-link:hover {
+  background-color: red;
+  color: white;
+}
+
+#footer {
   background-color: black;
   color: white;
 }
-footer li {
+#footer li {
   list-style: none;
   list-style-type: none;
 }
-footer a {
+#footer a {
   color: red;
 }
-footer a:hover {
+#footer a:hover {
   color: white;
 }
 #map {
@@ -53,4 +61,13 @@ footer a:hover {
 }
 iframe {
   width: 100%;
+}
+#myCarousel img {
+  width: auto;
+  height: 650px;
+  image-resolution: from-image;
+  background-size: cover;
+}
+.menu-title {
+  text-align: center;
 }
