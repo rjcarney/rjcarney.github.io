@@ -64,10 +64,23 @@ iframe {
 }
 #myCarousel img {
   width: auto;
-  height: 650px;
+  height: 500px;
   image-resolution: from-image;
   background-size: cover;
 }
 .menu-title {
+  text-align: center;
+}
+.price {
+  float: right;
+  text-align: right;
+}
+.app-title {
+  float: left;
+}
+.card-title {
+  text-align: center;
+}
+.topping {
   text-align: center;
 }
