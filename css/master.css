@@ -13,11 +13,11 @@ section {
   align-items: center;
 }
 
-#hero h2 {
+#hero h1 {
   text-align: center;
   position: relative;
   color: #fff;
-  font-size: 8em;
+  font-size: 5em;
 }
 #hero img {
   position: absolute;
