@@ -6,6 +6,10 @@ body {
   background: #111;
 }
 
+#fp-nav ul li a span{
+     background: white;
+}
+
 section {
   overflow: hidden;
   display: flex;
