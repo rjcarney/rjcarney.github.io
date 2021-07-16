@@ -150,7 +150,7 @@ p {
   background-image: url(../assets/images/camera.jpg);
 }
 #graphic-design {
-  background-image: url(../assets/images/camera.jpg);
+  background-image: url(../assets/images/graphic-design.jpg);
 }
 #web-development {
   background-image: url(../assets/images/webdev.jpg);
@@ -193,7 +193,7 @@ p {
   width: 50%;
 }
 .tagline h1 {
-  font-size: 32px;
+  font-size: 40px;
   text-align: center;
   width: 60%;
 }
@@ -226,18 +226,22 @@ textarea {
   right: 0;
   background: var(--dark);
 }
-#footer h1 {
+#footer .brand {
   position: relative;
   display: inline;
-  padding: 3px 0 3px 5px;
   font-size: 24px;
+  padding: 5px 0 3px 5px;
 }
-#footer a {
+#footer .link {
   display: inline;
   font-size: 17px;
   padding: 10px;
   text-align: center;
   margin-left: 10px;
+  align-items: center;
+}
+#footer .link:hover {
+  color: var(--primary);
 }
 .left{
   float: left;
