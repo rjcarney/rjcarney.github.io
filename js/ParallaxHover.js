@@ -1,5 +1,4 @@
 $('#hero').on('mousemove', parallax);
-$('#hero').on('swipe', parallax);
 
 function parallax(e) {
   this.querySelectorAll('.layer').forEach(layer => {

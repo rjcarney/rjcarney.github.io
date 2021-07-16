@@ -1,33 +1,259 @@
 :root {
+  --primary: #A40606;
+  --secondary: #5DA271;
+  --highlight: #97D8B2;
 
+  --dark: #02020A;
+  --light: #FFDDD2;
+
+  --shadow: #829399;
 }
 
-body {
-  background: #111;
+.light {
+  color: var(--light);
+}
+.dark {
+  color: var(--dark);
 }
 
-#fp-nav ul li a span{
-     background: white;
-}
-
-section {
-  overflow: hidden;
+.flex {
   display: flex;
-  justify-content: center;
-  align-items: center;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.column {
+  flex-direction: column;
 }
 
-#hero h1 {
-  text-align: center;
-  position: relative;
-  color: #fff;
-  font-size: 5em;
+.active {
+  background-color: var(--secondary);
 }
-#hero img {
+
+header {
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  background-color: var(--primary);
+  color: var(--light);
+  border-bottom: 1px solid var(--dark);
+}
+header div {
+  align-items: center;
+  justify-content: space-between;
+}
+header h1 {
+  padding: 3px 0 3px 5px;
+  font-size: 24px;
+}
+header span {
+  float: right;
+}
+a {
+  color: var(--light);
+  text-decoration: none;
+}
+
+.btn {
+  margin: 5px 5px 5px 0;
+  padding: 5px 10px;
+  border: 1px solid var(--light);
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--light);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+}
+
+.btn:hover, .navbar li a:hover{
+  background-color: var(--highlight);
+  color: var(--dark);
+}
+
+.navbar li {
+  display: inline;
+  overflow: hidden;
+}
+
+.navbar li a {
+  float: left;
+  display: block;
+  font-size: 17px;
+  padding: 10px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 32px;
+}
+h3 {
+  font-size: 28px;
+}
+
+#hero {
   width: 100%;
+  height: 100vh;
+  background-color: var(--dark);
+}
+
+#hero-text {
+  width: 50%;
+  justify-content: center;
+  padding: 20px;
+}
+#hero-text h2{
+  padding: 10px 15px 0 15px;
+}
+#hero-text p, #hero-text span {
+  padding: 10px 15px;
+}
+#parallax-hover {
+  width: 50%;
+  background-color: var(--secondary);
+}
+
+p {
+  font-size: 16px;
+}
+
+.tool {
+  padding: 25px;
+  width: 25%;
+
+  background-color: var(--light);
+  color: var(--dark);
+  text-align: center;
+  border: 1px solid var(--dark);
+}
+.tool:hover {
+  background-color: var(--highlight);
+}
+
+.service {
+  margin: 10px;
+  border: 1px solid var(--secondary);
+  box-shadow: 0 10px 10px 0 var(--shadow);
+}
+.service .top {
+  padding: 10px;
+  background-size: cover;
+  min-height: 200px;
+  background-position: center;
+}
+#photography {
+  background-image: url(../assets/images/camera.jpg);
+}
+#graphic-design {
+  background-image: url(../assets/images/camera.jpg);
+}
+#web-development {
+  background-image: url(../assets/images/webdev.jpg);
+}
+.service .bottom {
+  background-color: var(--dark);
+  color: var(--light);
+
+  padding: 10px;
+}
+.service .bottom p {
+  margin-bottom: 10px;
+}
+
+#contact {
+  overflow: hidden;
+}
+.parallax-scroll {
+  background: url(../assets/images/meeting.jpg)
+    repeat fixed 100%;
+  background-size: cover;
+}
+.parallax-scroll-inner {
+  height: 100vh;
+  position: relative;
+}
+.parallax-scroll-inner .flex {
+  justify-content: space-around;
+  align-items: center;
   height: 100%;
-  object-fit: cover;
+}
+.overlay{
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.tagline {
+  color: var(--light);
+  padding: 10px;
+  margin: 10px 25px 47px 25px;
+  width: 50%;
+}
+.tagline h1 {
+  font-size: 32px;
+  text-align: center;
+  width: 60%;
+}
+#contact-form {
+  width: 50%;
+}
+form {
+  background-color: var(--dark);
+  color: var(--light);
+  padding: 10px;
+  box-shadow: 0 10px 10px 0 var(--dark);
+
+  margin: 10px 25px 47px 25px;
+}
+#contact-form div {
+  width: 100%;
+}
+select {
+  width: 100%;
+}
+textarea {
+  width: 100%;
+  resize: none;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--dark);
+}
+#footer h1 {
+  position: relative;
+  display: inline;
+  padding: 3px 0 3px 5px;
+  font-size: 24px;
+}
+#footer a {
+  display: inline;
+  font-size: 17px;
+  padding: 10px;
+  text-align: center;
+  margin-left: 10px;
+}
+.left{
+  float: left;
+}
+.right {
+  float: right;
+}
+.mb-5 {
+  margin-bottom: 5px;
+}
+.labeled-input {
+  justify-content: space-between;
+}
+.labeled-input label {
+  width: 10%;
+}
+.labeled-input input {
+  width: 90%;
 }
