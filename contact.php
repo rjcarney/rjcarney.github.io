@@ -9,5 +9,5 @@
 
   mail("rcarney.rcweb@gmail.com", $service, $message);
 
-  header("Location: http://www.rcweb.studio/index.html");
+  header("Location: http://www.rcweb.studio/index.php?sent=true");
 ?>

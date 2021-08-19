@@ -183,5 +183,11 @@
 
     <script src="js/ResponsiveNav.js"></script>
     <script src="js/ParallaxHover.js"></script>
+    <?php
+    if(isset($_GET['sent']))
+    echo "<SCRIPT>
+            alert('Your message has been sent. We will get back to you as soon as possible.');
+          </SCRIPT>";
+    ?>
   </body>
 </html>
