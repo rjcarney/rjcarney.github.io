@@ -1,7 +1,7 @@
 :root {
-  --primary: #A40606;
-  --secondary: #5DA271;
-  --highlight: #97D8B2;
+  --primary: #407076;
+  --secondary: #7FBEEB;
+  --highlight: #0AD3FF;
 
   --dark: #02020A;
   --light: #FFDDD2;
@@ -28,6 +28,7 @@
 
 .active {
   background-color: var(--secondary);
+  color: var(--dark);
 }
 
 header {
@@ -38,14 +39,17 @@ header {
   background-color: var(--primary);
   color: var(--light);
   border-bottom: 1px solid var(--dark);
+  z-index: 10;
 }
 header div {
   align-items: center;
   justify-content: space-between;
 }
 header h1 {
-  padding: 3px 0 3px 5px;
+  position: relative;
+  padding: 3px 5px 3px 5px;
   font-size: 24px;
+  display: inline-block;
 }
 header span {
   float: right;
@@ -54,7 +58,6 @@ a {
   color: var(--light);
   text-decoration: none;
 }
-
 .btn {
   margin: 5px 5px 5px 0;
   padding: 5px 10px;
@@ -66,21 +69,20 @@ a {
   background-color: var(--primary);
   color: var(--light);
 }
-
 .btn-secondary {
   background-color: var(--secondary);
 }
-
 .btn:hover, .navbar li a:hover{
   background-color: var(--highlight);
   color: var(--dark);
 }
-
+.navbar ul {
+  width: 100%;
+}
 .navbar li {
   display: inline;
   overflow: hidden;
 }
-
 .navbar li a {
   float: left;
   display: block;
@@ -88,16 +90,20 @@ a {
   padding: 10px;
   text-align: center;
 }
+.nav-logo {
+  float: left;
+}
 #topnavToggle {
   display: none;
 }
+
 @media screen and (max-width: 600px) {
-  .navbar li a {display: none;}
+  .navbar li a:not(.nav-logo) {display: none;}
   #topnavToggle {
     float: right;
     display: block;
   }
-  #topnav.responsive {
+  #topnav {
     position: relative;
     width: 100%;
   }
@@ -141,8 +147,22 @@ h3 {
   padding: 10px 15px;
 }
 #parallax-hover {
+  position: relative;
   width: 50%;
+  overflow: hidden;
   background-color: var(--secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+#parallax-hover img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 @media screen and (max-width: 800px) {
   #hero {
