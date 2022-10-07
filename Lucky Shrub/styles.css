@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #ede7f1;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* Header Styling */
+header > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
+    height: 160px;
+}
+
+/* Navigation Bar Styling */
+nav {
+    margin: 1rem 0 0 0;
+    background-color: #288981;
+}
+nav ul {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+nav li {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+}
+nav a {
+    text-decoration: none;
+    color: #ede7f1;
+}
+nav li:hover {
+    background-color: #84beba;
+}
+nav li:hover a{
+    color: #010101;
+}
+
+/* Main Section Styling */
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+article {
+    flex: 1;
+}
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ede7f1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+h1 {
+    font-size: 3rem;
+    padding: 0 0 0.5rem 0;
+}
+h2 {
+    font-size: 2rem;
+    padding: 0.25rem 0 0.25rem 0;
+}
+
+/* Promotional Banner */
+#promotion {
+    background-size: cover;
+    background-position: center;
+    min-height: 365px;
+    position: relative;
+}
+#promotion > .overlay {
+    padding: 0.5rem;
+    display: flex;
+}
+#promotion > .overlay > div {
+    flex: 2;
+}
+#promotion > .overlay > div:last-child {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Banner Buttons */
+#promotion button {
+    width: 90%;
+    height: 3rem;
+    background-color: #288981;
+    color: #ede7f1;
+    border: #ede7f1 solid 1px;
+}
+#promotion div > button:first-child {
+    margin-bottom: 0.5rem;
+}
+#promotion button:hover {
+    background-color: #84beba;
+    color: #010101;
+}
+#promotion button:focus {
+    background-color: #21665f;
+    color: #010101;
+}
+
+/* Three Column Row */
+section .post:nth-child(1) {
+    margin-right: 0.5rem;
+}
+section .post:nth-child(2) {
+    margin-right: 0.25rem;
+    margin-left: 0.25rem;
+}
+section .post:nth-child(3) {
+    margin-left: 0.5rem;
+}
+.post {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.post .overlay {
+    display: block;
+    padding: 0.25rem;
+    max-height: 200px;
+    width: 100%;
+}
+.post p{
+    display: none;
+}
+.post:hover p {
+    display: inline;
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 1rem;
+    background-color: #288981;
+    display: flex;
+    color: #ede7f1;
+}
+footer div {
+    flex: 1;
+    padding: 0.5rem;
+}
+footer img {
+    width: 45px;
+    height: 90px;
+}
+footer div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+footer p {
+    width: 100%;
+}
+footer p:first-child {
+    text-align: left;
+}
+footer hr {
+    width: 100%;
+}
+footer p:last-child {
+    text-align: right;
+}
