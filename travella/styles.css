@@ -1,0 +1,203 @@
+/* Browser Resets */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
+}
+
+/* Header Styling */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 50%;
+    color: white;
+}
+.logo {
+    padding-left: 0.5rem;
+}
+
+/* Navigation Bar Styling */
+nav {
+    z-index: 10;;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 0;
+    background-color: rgba(20, 20, 130, 0.6);
+}
+nav ul {
+    display: flex;
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+nav li {
+    text-align: center;
+    width: 20%;
+    display: inline;
+    padding: 1em 1.25em;
+    color: lightgray;
+}
+nav li a {
+    text-decoration: none;
+    color: lightgray;
+}
+nav li:hover a,
+nav li.active a {
+    color: white;
+}
+nav li:hover {
+    background-color: rgba(39, 39, 43, 0.5);
+    cursor: pointer;
+}
+nav li.active {
+    background-color: rgba(50, 50, 200, 0.8);
+}
+
+/* Main Section Styling */
+section {
+    display: flex;
+}
+#hero {
+    background-color: rgb(5, 5, 40);
+    width: 100%;
+    height: 100vh;
+}
+#hero > div {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#hero .left {
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    color: white;
+}
+#hero .content {
+    padding: 5%;
+}
+.blue {
+    color: rgb(50, 50, 200);
+}
+button {
+    background-color: rgb(50, 50, 200);
+    color: white;
+    padding: 1em 1.5em;
+    border: none;
+    margin-top: 1em;
+}
+button:hover {
+    background-color: rgb(50, 50, 150);
+    cursor: pointer;
+}
+.icon-links {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.icon-links i {
+    padding: 0.25em;
+}
+.icon-links i.active {
+    background-color: white;
+    color: rgb(5, 5, 40);
+    border-radius: 50%;
+    padding: 0.25em;
+    margin-top: 0.1em;
+    box-shadow: 3px 5px 5px black;
+}
+.icon-links i:hover{
+    cursor: pointer;
+    color: rgb(50, 50, 200);
+}
+.icon-links i.active:hover {
+    background-color: rgb(50, 50, 200);
+    color: rgb(5, 5, 40);
+}
+
+.carousel{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.carouselContent {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+}
+#hero .carouselContent.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.carouselContent[id="flightContent"] {
+    background-image: url('assets/flight.jpg');
+}
+.carouselContent[id="hotelContent"] {
+    background-image: url('assets/hotel.jpg');
+}
+.carouselContent[id="eventContent"] {
+    background-image: url('assets/event.jpg');
+}
+
+.carouselContent form {
+    width: 90%;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    filter: drop-shadow(1mm 4mm 3mm rgb(0, 0, 0));
+}
+.carouselContent form > div {
+    display: flex;
+    margin-bottom: 0.25rem;
+}
+.carouselContent form > div > label {
+    margin-right: 0.25rem;
+    padding-left: 0.25rem;
+}
+.full_width {
+    width: 100%;
+}
+.half_width{
+    width: 50%;
+}
+.full_width > label {
+    flex: 10%;
+}
+.full_width > input {
+    flex: 90%;
+}
+.half_width > label {
+    flex: 20%;
+}
+.half_width > input {
+    flex: 80%;
+}
+form button {
+    width: 100%;
+}
+form h2 {
+    width: 100%;
+    border-bottom: 1px slategray solid;
+    margin-bottom: 1em;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travella</title>
+
+    <meta name="description" content="A brief description">
+    <meta name="autor" content="Travella">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/fa0899cd13.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1 class="logo">TRAVELLA</h1>
+    </header>
+    <nav>
+        <ul>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Flights</a></li>
+            <li><a href="#">Hotels</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">My Profile</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="hero">
+                <div class="left">
+                    <div class="content">
+                        <p>BENGLE HOME COLONY</p>
+                        <h1>Now It's Easy To<br>Find <span class="blue">Your Home</span></h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed, culpa perferendis soluta dolores voluptas consequatur? Architecto quo esse provident, magnam sed unde? Magni ducimus blanditiis non sequi, explicabo quibusdam itaque!</p>
+                        <button>Get Started <i class="fa-solid fa-angle-right"></i></button>
+                    </div>
+                    <div class="icon-links">
+                        <i id='flightIcon' class="fa-solid fa-plane active"></i>
+                        <i id='hotelIcon' class="fa-solid fa-hotel"></i>
+                        <i id='eventIcon' class="fa-solid fa-ticket"></i>
+                    </div>       
+                </div>
+                <div class="right">
+                    <div class="carousel">
+                        <div id="flightContent" class="carouselContent active">
+                            <form id="flightForm" action="">
+                                <h2>Flights:</h2>
+                                <div class="half_width">
+                                    <label for="from">From</label>
+                                    <input type="text" name="from" placeholder="DET" required>
+                                </div>
+                                <div class="half_width">
+                                    <label for="to">To</label>
+                                    <input type="text" name="to" placeholder="LAX" required>
+                                </div>
+                                <div class="half_width">
+                                    <label for="depart">Depart</label>
+                                    <input type="date" name="depart" required>
+                                </div class="half_width">
+                                <div class="half_width">
+                                    <label for="return">Return</label>
+                                    <input type="date" name="return" required>
+                                </div>
+                                <button type="submit">Search for Flights</button>
+                            </form>
+                        </div>
+                        <div id="hotelContent" class="carouselContent">
+                            <form id="hotleForm" action="">
+                                <h2>Hotels:</h2>
+                                <div class="full_width">
+                                    <label for="city">City</label>
+                                    <input type="text" name="city" placeholder="City" required>
+                                </div>
+                                <div class="full_width">
+                                    <label for="guests">Guests</label>
+                                    <input type="number" name="guests" required min="1">
+                                </div>
+                                <div class="half_width">
+                                    <label for="check-in">In</label>
+                                    <input type="date" name="check-in" required>
+                                </div>
+                                <div class="half_width">
+                                    <label for="check-out">Out</label>
+                                    <input type="date" name="check-out" required>
+                                </div>
+                                <button type="submit">Search for Hotels</button>
+                            </form>
+                        </div>
+                        <div id="eventContent" class="carouselContent">
+                            <form id="eventForm" action="">
+                                <h2>Events:</h2>
+                                <div class="full_width">
+                                    <label for="city">City</label>
+                                    <input type="text" name="city" placeholder="City" required>
+                                </div>
+                                <div class="full_width">
+                                    <label for="day">Day</label>
+                                    <input type="date" name="day">
+                                </div>
+                                <button type="submit">Search for Events</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section></section>
+    </main>
+    <footer></footer>
+
+    <script src="js/carousel.js"></script>
+</body>
+</html>
