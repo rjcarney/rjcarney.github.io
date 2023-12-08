@@ -182,16 +182,16 @@ button:hover {
     width: 50%;
 }
 .full_width > label {
-    flex: 10%;
+    width: 10%;
 }
 .full_width > input {
-    flex: 90%;
+    width: 90%;
 }
 .half_width > label {
-    flex: 20%;
+    width: 20%;
 }
 .half_width > input {
-    flex: 80%;
+    width: 80%;
 }
 form button {
     width: 100%;
@@ -200,4 +200,17 @@ form h2 {
     width: 100%;
     border-bottom: 1px slategray solid;
     margin-bottom: 1em;
+}
+
+#mission {
+    flex-direction: column;
+    text-align: center;
+    padding: 0.5rem 5% 0.5rem 5%;
+}
+#mission h1 {
+    font-size: 3rem;
+}
+#mission p {
+    margin-bottom: 0.5rem;
+    padding: 1.5rem;
 }

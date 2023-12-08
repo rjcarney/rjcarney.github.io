@@ -10,7 +10,7 @@ icons.forEach(icon => {
     });
 });
 
-var lapse = 35000;
+var lapse = 15000;
 setInterval(function () {
     for(let i = 0; i < icons.length; i++){
         if(icons[i].classList.contains('active')){
