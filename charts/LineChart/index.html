@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Chart</title>
+
+    <link rel="stylesheet" href="linechart.css">
+    <script src="linechart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="graph-display">
+            <div id="line-example"></div>
+        </div>
+        <div class="graph-editor">
+            <h2>Graph editor</h2>
+
+            <div class="graph-editor-options">
+                <h4>Graph Labels</h4>
+                <div class="graph-editor-input">
+                    <p>Title: </p><input type="text" value='Weekly Sales' placeholder="title">
+                </div>
+                <div class="graph-editor-input">
+                    <p>X Label: </p><input type="text" value='Weekday' placeholder="label for x axis">
+                </div>
+                <div class="graph-editor-input">
+                    <p>Y Label: </p><input type="text" value='Units Sold' placeholder="label for y axis">
+                </div>
+                <h4>Graph Size</h4>
+                <div class="graph-editor-input">
+                    <p>Size: </p><input type="number"  value='200' placeholder="height/width in px">
+                </div>
+                <div class="graph-editor-input">
+                    <p>Y Max: </p><input type="number" value='80' placeholder="Y Maximun">
+                </div>
+                <h4>Add data point</h4>
+                <div class="graph-editor-input">
+                    <p>Value: </p><input type="text" placeholder="value">
+                </div>
+                <div class="graph-editor-input">
+                    <p>Label: </p><input type="text" placeholder="label">
+                </div>
+                <button>Add</button>
+                <h4>Remove data point</h4>
+                <div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script>
+        const data = [
+            { value: 25, label: "Monday" },
+            { value: 60, label: "Tuesday" },
+            { value: 45, label: "Wednesday" },
+            { value: 50, label: "Thursday" },
+            { value: 40, label: "Friday" },
+        ];
+
+        createLineChart('line-example', data, 200, 80, 'Weekly Sales');
+    </script>
+</body>
+</html>

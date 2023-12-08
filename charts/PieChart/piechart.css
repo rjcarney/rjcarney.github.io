@@ -1,0 +1,7 @@
+.pie {
+    height: var(--widget-size);
+    width: var(--widget-size);
+    position: relative;
+    background: #639;
+    border-radius: 100%;
+}

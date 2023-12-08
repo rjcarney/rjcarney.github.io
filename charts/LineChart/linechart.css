@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.graph-display {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.graph-editor {
+    background-color: lightgrey;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+.graph-editor-options{
+    display: flex;
+    flex-direction: column;
+}
+.graph-editor-options h4 {
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+.graph-editor-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+.graph-editor-input input{
+    height: 32px;
+}
+
+.css-chart {
+    margin: 1em;
+    padding: 0;
+    position: relative;
+
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    
+    height: var(--widget-size);
+    width: var(--widget-size);
+}
+
+.line-chart {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.data-point {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    border: 2px solid lightblue;
+    background-color: white;
+    position: absolute;
+    bottom: calc(var(--y) - 6.5px);
+    left: calc(var(--x) - 9.5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tooltip {
+    position: absolute;
+    width: fit-content;
+    padding: 3px;
+    background-color: lightblue;
+    opacity: 0.8;
+    bottom: 12px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 3px;
+    display: none;
+}
+
+.data-point:hover .tooltip {
+    display: flex;
+    z-index: 5;
+}
+
+.line-segment {
+    position: absolute;
+    bottom: var(--y);
+    left: var(--x);
+    background-color: blue;
+    height: 3px;
+    width: calc(var(--hypotenuse) * 1px);
+    transform: rotate(calc(var(--angle) * -1deg));
+    transform-origin: left bottom;
+}
+

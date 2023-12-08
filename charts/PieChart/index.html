@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pie Chart</title>
+    <link rel="stylesheet" href="piechart.css">
+    <script src="piechart.js"></script>
+</head>
+<body>
+    <div id="pie-example"></div>
+
+    <script>
+        const data = [
+            {value: 40, bg: 'blue'},
+            {value: 30, bg: 'red'},
+            {value: 20, bg: 'green'},
+            {value: 10, bg: 'yellow'}            
+        ];
+
+        createPieChart('pie-example', data, 200);
+    </script>
+</body>
+</html>

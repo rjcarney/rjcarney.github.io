@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Stock Scrapper</h1>
+        
+        <div>
+            <input type="text" id="search" placeholder="Ticker">
+            <button onclick="scrapeData(document.getElementById('search').value)">search</button>
+        </div>
+    </div>
+
+    <div id="data-table">
+        <table>
+            <tr>
+                <th>Ticker</th>
+                <th>Previous Close</th>
+                <th>Open</th>
+                <th>Bid</th>
+                <th>Ask</th>
+                <th>Day's Range</th>
+                <th>52 Week Range</th>
+                <th>Volume</th>
+                <th>Avg. Volume</th>
+                <th>Market Cap</th>
+                <th>Beta (5Y Monthly)</th>
+                <th>PE Ratio (TTM)</th>
+                <th>EPS (TTM)</th>
+                <th>Earnings Date</th>
+                <th>Forward Dividend & Yield</th>
+                <th>Ex-Dividend Date</th>
+                <th>1y Target Est</th>
+            </tr>
+        </table>
+    </div>
+</body>
+
+    <script>
+        function scrapeData(ticker){
+            // Create a HTTP Request and specify parameters
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', `https://cors-anywhere.herokuapp.com/https://finance.yahoo.com/quote/${ticker}/?p=${ticker}`, true);
+            xhr.responseType = 'document';
+
+
+            xhr.onload = function() {
+                if(xhr.readyState == 4 && xhr.status == 200) {
+
+                    // Find data table on yahoo finance web page
+                    var response = xhr.responseXML.querySelectorAll('#quote-summary tr');
+
+                    // Create an object to store our data inside
+                    var data = {};
+                    data['Ticker'] = ticker;// store data used to make request
+
+                    // loop through data in response and store
+                    response.forEach((item, index) => {
+                        var header = item.children[0].textContent;
+                        var value = item.children[1].textContent;
+
+                        data[header] = value;
+                    });
+
+                    // if data was successfully retrieved print data to our own table 
+                    if(!data['Open']) {
+                        alert(`${ticker} is not a valid Ticker`)
+                    } else {
+                        printData(ticker, data);
+                    }
+                    
+                }
+            }
+
+
+            xhr.onerror = function() {
+                console.error(xhr.status, xhr.statusText);
+            }
+
+            xhr.send();
+        }
+
+        function printData(ticker, data) {
+            var table = document.querySelector('#data-table>table');
+            let tr = document.createElement('tr');
+            for(const property in data){
+                let td = document.createElement('td');
+                td.innerHTML = data[property];
+                tr.append(td);
+            }
+            table.append(tr);
+        }
+
+        scrapeData('TSLA');
+        scrapeData('F');
+        scrapeData('BP');
+    </script>
+</html>
